@@ -1,0 +1,58 @@
+#myFooter {
+	background-color: #373a48;
+	color:white;
+    padding-bottom:35px;
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+}
+
+#myFooter a{
+	color:#d2d1d1;
+	text-decoration: none;
+}
+
+#myFooter .social-networks{
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 8px;
+}
+
+#myFooter .social-networks a{
+    font-size: 32px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: #f9f9f9;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+#myFooter .social-networks .linkedIn:hover{
+	color:#04669A;
+}
+
+#myFooter .social-networks .github:hover{
+	color: #040204;;
+}
+
+@media screen and (max-width: 767px){
+	#myFooter {
+		text-align: center;
+	}
+}
+
+#copyright {
+	text-align: center;
+}
+
+html{
+	height: 100% !important;
+}
+
+body{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    height: 100%;
+}
+
