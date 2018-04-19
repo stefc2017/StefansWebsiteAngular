@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
-import { AppComponent } from '../business/app.component';
-import { NavbarComponent } from '../business/navbar.component';
-import { WelcomeComponent } from '../business/welcome.component';
-import { FooterComponent } from '../business/footer.component';
+import { AppComponent } from '../business/components/app.component';
+import { NavbarComponent } from '../business/components/navbar.component';
+import { WelcomeComponent } from '../business/components/welcome.component';
+import { FooterComponent } from '../business/components/footer.component';
+import { EducationService } from '../business/services/education.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { FooterComponent } from '../business/footer.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [EducationService],
   bootstrap: [AppComponent, NavbarComponent, WelcomeComponent, FooterComponent]
 })
 export class AppModule { }
