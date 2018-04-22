@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 import { HttpHandler } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { VerticalTimelineModule } from 'angular-vertical-timeline';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from '../business/components/app.component';
@@ -28,8 +27,7 @@ import { EducationService } from '../business/services/education.service';
     FormsModule,
     AppRoutingModule,
     HttpModule,
-    HttpClientModule,
-    VerticalTimelineModule
+    HttpClientModule
   ],
   providers: [EducationService],
   bootstrap: [AppComponent, NavbarComponent, WelcomeComponent, FooterComponent, EducationComponent]
