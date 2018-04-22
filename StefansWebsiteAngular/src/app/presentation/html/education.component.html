@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <div class="container">
+            <div id="educationSection" class="jumbotron">
+                <h1 id="educationTitle">My Education</h1>
+                <section id="timeline">
+                    <article *ngFor="let entry of myEducation">
+                        <div class="inner">
+                            <span class="date"></span>
+                            <h2>{{entry?.educationDate}}</h2>
+                            <p>{{entry?.educationDescription}}</p>
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
