@@ -12,7 +12,10 @@ import { NavbarComponent } from '../business/components/navbar.component';
 import { WelcomeComponent } from '../business/components/welcome.component';
 import { FooterComponent } from '../business/components/footer.component';
 import { EducationComponent } from '../business/components/education.component';
+import { TechnicalSkillsComponent } from '../business/components/technicalSkills.component';
+
 import { EducationService } from '../business/services/education.service';
+import { TechnicalSkillService } from '../business/services/technicalSkill.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,8 @@ import { EducationService } from '../business/services/education.service';
     NavbarComponent,
     WelcomeComponent,
     FooterComponent,
-    EducationComponent
+    EducationComponent,
+    TechnicalSkillsComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,7 @@ import { EducationService } from '../business/services/education.service';
     HttpModule,
     HttpClientModule
   ],
-  providers: [EducationService],
-  bootstrap: [AppComponent, NavbarComponent, WelcomeComponent, FooterComponent, EducationComponent]
+  providers: [EducationService, TechnicalSkillService],
+  bootstrap: [AppComponent, NavbarComponent, WelcomeComponent, FooterComponent, EducationComponent, TechnicalSkillsComponent]
 })
 export class AppModule { }
