@@ -1,109 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <title>Technical skills</title>
-
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- Latest compiled JavaScript -->
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"/>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    </head>
+        <meta charset="utf-8">
+        <title>Technical skills</title>        
+      </head>
 
     <body>
-        <div id="technicalSkillsPage" class="jumbotron container">
+        <div class="container">
+            <div id="technicalSkillsPage" class="jumbotron">
 
-            <div id="technicalSkillsHeader">
-                <h1 id="technicalSkillsTitle">Technical Skills</h1>
-            </div>
-
-            <div id="technicalSkillsBody">
-
-            <!-- Programming languages -->
-            <h3>Programming Languages</h3>
-                <div id="programmingLanguages">
-                    <div>
-                        <div class="row">
-                            <div *ngFor="let language of languages">
-                                <!-- Left column -->
-                                <div class="col-md-6">
-                                    <span class="progress-label">{{language?.technicalSkillName}}</span>
-                                    <div class="progress">
-                                        <div id="{{language?.technicalSkillName}}" class="progress-bar progress-bar-striped {{setProgressBarColor(language?.technicalSkillProficiency)}} active" role="progressbar"
-                                            aria-valuenow="language?.technicalSkillProficiency" aria-valuemin="0" aria-valuemax="100" [style.width]="language?.technicalSkillProficiency+ '%'">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div id="technicalSkillsHeader">
+                    <h1 id="technicalSkillsTitle">Technical Skills</h1>
                 </div>
 
-            <h3>Technologies and Frameworks</h3>
-                <div id="techAndFrameworks">
-                    <div>
-                        <div class="row">
-                            <div *ngFor="let framework of frameworks">
-                                <!-- Left column -->
-                                <div class="col-md-6">
-                                    <span class="progress-label">{{framework?.technicalSkillName}}</span>
-                                    <div class="progress">
-                                        <div id="{{framework?.technicalSkillName}}" class="progress-bar progress-bar-striped {{setProgressBarColor(framework?.technicalSkillProficiency)}} active" role="progressbar"
-                                            aria-valuenow="framework?.technicalSkillProficiency" aria-valuemin="0" aria-valuemax="100" [style.width]="framework?.technicalSkillProficiency+ '%'">
+                <div id="technicalSkillsBody" class="panel-group">
+                    <!-- Programming languages -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#technicalSkillsBody" href="#programmingLanguages">Programming Languages</a>
+                            </h4>
+                        </div>
+                
+                        <div id="programmingLanguages" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <div>
+                                    <div class="row">
+                                        <div *ngFor="let language of languages">
+                                            <!-- Left column -->
+                                            <div class="col-md-6">
+                                                <span class="progress-label">{{language?.technicalSkillName}}</span>
+                                                <div class="progress">
+                                                    <div id="{{language?.technicalSkillName}}" class="progress-bar progress-bar-striped {{setProgressBarColor(language?.technicalSkillProficiency)}} active" role="progressbar"
+                                                        aria-valuenow="language?.technicalSkillProficiency" aria-valuemin="0" aria-valuemax="100" [style.width]="language?.technicalSkillProficiency+ '%'">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-            <h3>Operating Systems</h3>
-                <div id="Operating_Systems">
-                    <div>
-                        <div class="row">
-                            <div *ngFor="let os of operatingSystems">
-                                <!-- Left column -->
-                                <div class="col-md-6">
-                                    <span class="progress-label">{{os?.technicalSkillName}}</span>
-                                    <div class="progress">
-                                        <div id="{{os?.technicalSkillName}}" class="progress-bar progress-bar-striped {{setProgressBarColor(os?.technicalSkillProficiency)}} active" role="progressbar"
-                                            aria-valuenow="os?.technicalSkillProficiency" aria-valuemin="0" aria-valuemax="100" [style.width]="os?.technicalSkillProficiency+ '%'">
+                    <!-- Technologies and Frameworks -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#technicalSkillsBody" href="#techAndFrameworks">Technologies and Frameworks</a>
+                            </h4>
+                        </div>
+                    
+                        <div id="techAndFrameworks" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div>
+                                    <div class="row">
+                                        <div *ngFor="let framework of frameworks">
+                                            <!-- Left column -->
+                                            <div class="col-md-6">
+                                                <span class="progress-label">{{framework?.technicalSkillName}}</span>
+                                                <div class="progress">
+                                                    <div id="{{framework?.technicalSkillName}}" class="progress-bar progress-bar-striped {{setProgressBarColor(framework?.technicalSkillProficiency)}} active" role="progressbar"
+                                                        aria-valuenow="framework?.technicalSkillProficiency" aria-valuemin="0" aria-valuemax="100" [style.width]="framework?.technicalSkillProficiency+ '%'">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                        
 
-            <h3>Software</h3>
-                <div id="Software">
-                    <div>
-                        <div class="row">
-                            <div *ngFor="let sw of software">
-                                <!-- Left column -->
-                                <div class="col-md-6">
-                                    <span class="progress-label">{{sw?.technicalSkillName}}</span>
-                                    <div class="progress">
-                                        <div id="{{sw?.technicalSkillName}}" class="progress-bar progress-bar-striped {{setProgressBarColor(sw?.technicalSkillProficiency)}} active" role="progressbar"
-                                            aria-valuenow="sw?.technicalSkillProficiency" aria-valuemin="0" aria-valuemax="100" [style.width]="sw?.technicalSkillProficiency+ '%'">
+                    <!-- Operating Systems -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#technicalSkillsBody" href="#Operating_Systems">Operating Systems</a>
+                            </h4>
+                        </div>
+                    
+                        <div id="Operating_Systems" class="panel-collapse collapse">
+                            <div>
+                                <div class="row">
+                                    <div *ngFor="let os of operatingSystems">
+                                        <!-- Left column -->
+                                        <div class="col-md-6">
+                                            <span class="progress-label">{{os?.technicalSkillName}}</span>
+                                            <div class="progress">
+                                                <div id="{{os?.technicalSkillName}}" class="progress-bar progress-bar-striped {{setProgressBarColor(os?.technicalSkillProficiency)}} active" role="progressbar"
+                                                    aria-valuenow="os?.technicalSkillProficiency" aria-valuemin="0" aria-valuemax="100" [style.width]="os?.technicalSkillProficiency+ '%'">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Software -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#technicalSkillsBody" href="#Software">Software</a>
+                            </h4>
+                        </div>
+                    
+                        <div id="Software" class="panel-collapse collapse">
+                            <div>
+                                <div class="row">
+                                    <div *ngFor="let sw of software">
+                                        <!-- Left column -->
+                                        <div class="col-md-6">
+                                            <span class="progress-label">{{sw?.technicalSkillName}}</span>
+                                            <div class="progress">
+                                                <div id="{{sw?.technicalSkillName}}" class="progress-bar progress-bar-striped {{setProgressBarColor(sw?.technicalSkillProficiency)}} active" role="progressbar"
+                                                    aria-valuenow="sw?.technicalSkillProficiency" aria-valuemin="0" aria-valuemax="100" [style.width]="sw?.technicalSkillProficiency+ '%'">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
                 </div>
             </div>
         </div>
-
-            <!-- <script>
-                $("#technicalSkillsBody").accordion({
-                    heightStyle: "content"
-                });
-            </script> -->
     </body>
 </html>
