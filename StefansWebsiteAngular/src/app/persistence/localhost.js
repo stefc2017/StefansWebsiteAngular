@@ -29,9 +29,49 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
     next();
   });
-
+  
 app.get('/api/education', (req, res) => {
     let sql = 'SELECT * FROM education';
+    
+    let query = connection.query(sql, (err, result)=> {
+        if( err ) throw err;
+        console.log(result);
+        res.send(result);
+    });
+});
+
+app.get('/api/technicalskills/language', (req, res) => {
+    let sql = 'SELECT * FROM technicalskill WHERE technicalSkillCategory = "ProgrammingLanguage" ORDER BY technicalSkillProficiency DESC';
+    
+    let query = connection.query(sql, (err, result)=> {
+        if( err ) throw err;
+        console.log(result);
+        res.send(result);
+    });
+});
+
+app.get('/api/technicalskills/framework', (req, res) => {
+    let sql = 'SELECT * FROM technicalskill WHERE technicalSkillCategory = "Framework" ORDER BY technicalSkillProficiency DESC';
+    
+    let query = connection.query(sql, (err, result)=> {
+        if( err ) throw err;
+        console.log(result);
+        res.send(result);
+    });
+});
+
+app.get('/api/technicalskills/operatingSystem', (req, res) => {
+    let sql = 'SELECT * FROM technicalskill WHERE technicalSkillCategory = "OperatingSystem" ORDER BY technicalSkillProficiency DESC';
+    
+    let query = connection.query(sql, (err, result)=> {
+        if( err ) throw err;
+        console.log(result);
+        res.send(result);
+    });
+});
+
+app.get('/api/technicalskills/software', (req, res) => {
+    let sql = 'SELECT * FROM technicalskill WHERE technicalSkillCategory = "Software" ORDER BY technicalSkillProficiency DESC';
     
     let query = connection.query(sql, (err, result)=> {
         if( err ) throw err;
