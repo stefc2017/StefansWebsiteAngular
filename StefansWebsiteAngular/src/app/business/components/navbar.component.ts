@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-navbar',
@@ -6,4 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['../../presentation/css/navbar.component.css']
 })
 export class NavbarComponent {
+
+  setActive(clickedElement){
+    $(".active").removeClass("active");
+    $(clickedElement).addClass("active");
+  }
+
 }

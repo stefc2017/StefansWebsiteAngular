@@ -7,3 +7,7 @@
 #stefanWebsite_a, #home_a, #education_a, #technical_a, #coopExp_a, #projects_a, #work_a{
     color: white;
 }
+
+.active > a{
+    background-color: #2F4F4F;
+}

@@ -16,10 +16,10 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="nav navbar-nav">
-                        <li><a id="home_a" href="#homeHeader">Home</a></li>
-                        <li><a id="education_a" href="#educationHeader">Education</a></li>
-                        <li id="testtest"><a id="technical_a" href="#technicalSkillsHeader">Technical Skills</a></li>
-                        <li><a id="projects_a" href="#projectsContainer">Projects</a></li>
+                        <li id="homeTab" class="active" (click)="setActive('#homeTab')"><a id="home_a" href="#homeHeader">Home</a></li>
+                        <li id="educationTab" (click)="setActive('#educationTab')"><a id="education_a" href="#educationSection">Education</a></li>
+                        <li id="technicalTab" (click)="setActive('#technicalTab')"><a id="technical_a" href="#technicalSkillsPage">Technical Skills</a></li>
+                        <li id="projectsTab" (click)="setActive('#projectsTab')"><a id="projects_a" href="#projectsContainer">Projects</a></li>
                     </ul>
                 </div>
             </div>
