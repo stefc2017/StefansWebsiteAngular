@@ -1,7 +1,27 @@
 # StefansWebsiteAngular
-After learning Angular with Nodejs, Express and MySql, I am making my website that was implemented using only front-end and hardcoded data into a multi-tier application with the Front-end in Angular and Nodejs, Express and MySql as backend.
 
-This will be an ongoing project during Summer 2018 and will take my earlier website coded in JavaScript and HTML/CSS and will turn it into a 3 tier architecture consisting of:
-1) Front-end: Angular aka HTML/CSS and other frameworks such as Bootstrap
-2) Business-logic: Angular aka Typescript/JavaScript
-3) Persistence: Node js with Mysql and Express
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
